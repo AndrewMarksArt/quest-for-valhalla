@@ -1,6 +1,6 @@
 import "../css/main.css"
 import { useState } from "react";
-import { submitForm } from '../services/submitForm';
+import submitForm from '../services/submitForm';
 
 export default function Hero() {
     // State for email input
