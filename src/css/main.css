@@ -57,7 +57,7 @@ body, html {
 }
 
 .navbar-link:hover {
-    color: #FFF9F4;
+    color: var(--clr-main-hover);
     font-weight: var(--fw-bold);
 }
 
