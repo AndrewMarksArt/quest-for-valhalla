@@ -5,6 +5,8 @@ export default function Hero() {
     // State for email input
     const [email, setEmail] = useState("");
     const [showModal, setShowModal] = useState(false);
+    const [showErrorModal, setShowErrorModal] = useState(false);
+    const [sending, setSending] = useState(false);
 
     const handleChange = (event) => {
         setEmail(event.target.value);
@@ -28,6 +30,7 @@ export default function Hero() {
         const apiKey = import.meta.env.VITE_NOCODE_API;
 
         try {
+            setSending(true);
             const response = await fetch(
                 apiKey, {
                     method: 'POST',
@@ -37,14 +40,23 @@ export default function Hero() {
                     body: JSON.stringify([[email, new Date().toLocaleString()]])
                 }
             );
-            await response.json()
-            console.log("Email saved: ", email);
-            setEmail(""); // Clear the text input
-            
-            setShowModal(true); // show the thank you for signing up modal
 
+            if (response.ok) {
+                setShowModal(true);
+                setSending(false);
+                setEmail("");
+            } else {
+                setSending(false);
+                setShowErrorModal(true);
+            }
+            // await response.json()
+            // setShowModal(true);
+            // setEmail(""); // Clear the text input
+            
         } catch (err) {
             console.error("Error saving email:", err);
+            setSending(false);
+            setShowErrorModal(true);
         };
     };
 
@@ -93,17 +105,42 @@ export default function Hero() {
         {showModal && (
             <div className="modal">
                 <div className="modal-content">
-                    <h3>Thank You!</h3>
-                    <p>Here's a sneak peek of what's coming:</p>
+                    <h3 className="modal-title">Thank You!</h3>
+                    <p className="modal-msg">
+                        We'll send an eamil to confirm your early access soon! Come 
+                        Join our Discord for a chance to win a Legendary 'Golden Quest'!
+                    </p>
+                    <div>
+                        <img className="modal-image" src="../public/img/goldenQuest.png" />
+                    </div>
                     <button className="button-secondary" onClick={joinDiscord}>
                         Join Discord
                     </button>
-                    <button className="modal-close" onClick={closeModal}>
-                        Close
-                    </button>
+                    <div>
+                        <button className="modal-close" onClick={closeModal}>
+                            Close
+                        </button>
+                    </div>
                 </div>
             </div>
         )}
+
+        {showErrorModal && (
+            <div className="modal">
+                <div className="modal-content">
+                <h3 className="modal-title">Sorry, something went wrong.</h3>
+                <p className="modal-msg">Join us in Discord and we can help get your early access confirmed!</p>
+                <button className="button-secondary" onClick={joinDiscord}>
+                        Join Discord
+                    </button>
+                    <div>
+                        <button className="modal-close" onClick={closeModal}>
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+            )}
 
         </>
     );

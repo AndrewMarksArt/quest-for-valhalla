@@ -92,19 +92,6 @@ body, html {
     z-index: 10;
 }
 
-.divider {
-    display: flex;
-    justify-content: center;
-    margin-top: -12px;
-    background-color: #191B24;
-    max-height: 3rem;
-
-}
-
-.divider-image {
-    width: 100%;
-    max-height: 100%;
-}
 
 .title {
     display: block;
@@ -210,23 +197,66 @@ body, html {
 }
 
 .modal-content {
-    background-color: white;
+    background-color: #252634;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 40px;
     text-align: center;
-    max-width: 500px;
+    max-width: 40vw;
     width: 80%;
+    height: 75vh;
+}
+
+.modal-title {
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-primary);
+    color: var(--clr-main);
+    font-size: 2.5rem;
+    line-height: .5rem;
+    margin-top: 1.5rem;
+}
+
+.modal-msg {
+    font-weight: var(--fw-reg);
+    font-family: var(--ff-primary);
+    color: var(--clr-main);
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.modal-image {
+    max-width: 22vw;
+    margin-bottom: 2rem;
 }
 
 .modal-close {
-    background-color: #f44336;
-    color: white;
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
+    background-color: var(--clr-main);
+    color: var(--clr-second);
+    outline: .1rem solid var(--clr-second);
+    border-radius: 10px;
+    min-width: 18vw;
+    height: 3rem;
+    box-shadow: none;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: 16px;
+    margin-bottom: 20px;
 }
+
+.modal-close:hover {
+    box-shadow: .3rem .3rem 0px var(--clr-main-hover);
+    transform: translate(-.3rem, -.3rem);
+}
+
+.modal-close:active {
+    box-shadow: none;
+    transform: translate(.1rem, .1rem);
+}
+
 
 
 /* extra small screens */
@@ -259,23 +289,65 @@ body, html {
 
     .button-primary {
         border-radius: 8px;
-        min-width: 12vw;
+        width: 40vw;
         height: 2.5rem;
         box-shadow: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: .2rem;
     }
 
     .button-secondary {
         border-radius: 8px;
-        min-width: 12vw;
+        width: 40vw;
         height: 2.5rem;
         box-shadow: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: .2rem;
     }
 
+    .modal-content {
+        padding: 20px;
+        border-radius: 20px;
+        max-width: 60vw;
+        width: 80%;
+        height: 60vh;
+    }
+    
+    .modal-title {
+        font-weight: var(--fw-bold);
+        font-family: var(--ff-primary);
+        color: var(--clr-main);
+        font-size: 2rem;
+        line-height: .5rem;
+        margin-top: 3rem;
+    }
+    
+    .modal-msg {
+        font-weight: var(--fw-reg);
+        font-family: var(--ff-primary);
+        color: var(--clr-main);
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .modal-image {
+        max-width: 40vw;
+        margin-bottom: 2rem;
+    }
+
+    .modal-close {
+        border-radius: 8px;
+        width: 40vw;
+        height: 2.5rem;
+        box-shadow: none;
+        font-size: 1rem;
+    }
+
 }
+
+
 
 /* Small device styles */
 @media screen and (min-width: 577px) and (max-width: 768px) {
@@ -309,11 +381,58 @@ body, html {
 
     .button-primary {
         margin-bottom: .2rem;
+        width: 40vw;
+        font-size: 1.2rem;
+    }
+
+    .button-secondary {
+        width: 40vw;
+        font-size: 1.2rem;
     }
 
     .main-img {
         max-width: 85%;
         max-height: 70vh;
+    }
+
+    .modal-content {
+        padding: 20px;
+        border-radius: 20px;
+        max-width: 60vw;
+        width: 80%;
+        height: 60vh;
+    }
+    
+    .modal-title {
+        font-weight: var(--fw-bold);
+        font-family: var(--ff-primary);
+        color: var(--clr-main);
+        font-size: 2rem;
+        line-height: .5rem;
+        margin-top: 2rem;
+    }
+    
+    .modal-msg {
+        font-weight: var(--fw-reg);
+        font-family: var(--ff-primary);
+        color: var(--clr-main);
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .modal-image {
+        max-width: 35vw;
+        margin-bottom: 2rem;
+    }
+
+    .modal-close {
+        border-radius: 8px;
+        width: 40vw;
+        height: 3rem;
+        box-shadow: none;
+        font-size: 1.5rem;
     }
   }
   
@@ -349,11 +468,56 @@ body, html {
 
     .button-primary {
         margin-bottom: .2rem;
+        width: 30vw;
+    }
+
+    .button-secondary {
+        width: 30vw;
     }
 
     .main-img {
         max-width: 85%;
         max-height: 70vh;
+    }
+
+    .modal-content {
+        padding: 20px;
+        border-radius: 20px;
+        max-width: 60vw;
+        width: 80%;
+        height: 70vh;
+    }
+    
+    .modal-title {
+        font-weight: var(--fw-bold);
+        font-family: var(--ff-primary);
+        color: var(--clr-main);
+        font-size: 2.5rem;
+        line-height: .5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .modal-msg {
+        font-weight: var(--fw-reg);
+        font-family: var(--ff-primary);
+        color: var(--clr-main);
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .modal-image {
+        max-width: 32vw;
+        margin-bottom: 2rem;
+    }
+
+    .modal-close {
+        border-radius: 10px;
+        width: 30vw;
+        height: 3rem;
+        box-shadow: none;
+        font-size: 1.5rem;
     }
   }
 
@@ -371,6 +535,50 @@ body, html {
 
     .button-primary {
         margin-bottom: .2rem;
+    }
+
+    .button-secondary {
+        width: 20vw;
+    }
+
+    .modal-content {
+        padding: 20px;
+        border-radius: 20px;
+        max-width: 60vw;
+        width: 80%;
+        height: 70vh;
+    }
+    
+    .modal-title {
+        font-weight: var(--fw-bold);
+        font-family: var(--ff-primary);
+        color: var(--clr-main);
+        font-size: 2.5rem;
+        line-height: .5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .modal-msg {
+        font-weight: var(--fw-reg);
+        font-family: var(--ff-primary);
+        color: var(--clr-main);
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .modal-image {
+        max-width: 28vw;
+        margin-bottom: 2rem;
+    }
+
+    .modal-close {
+        border-radius: 10px;
+        width: 20vw;
+        height: 3rem;
+        box-shadow: none;
+        font-size: 1.5rem;
     }
   }
   
