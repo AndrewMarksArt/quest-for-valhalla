@@ -4,7 +4,8 @@ import submitForm from '../services/submitForm';
 
 export default function Hero() {
     // State for email input
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
     const handleChange = (event) => {
         setEmail(event.target.value);
@@ -17,20 +18,22 @@ export default function Hero() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        if (!validateEmail(email)) {
-            alert("Please enter a valid email address.");
-            return;
-        }
-
-        console.log("Submitting email:", email);
-
         try {
-            await submitForm(email); // Call the submitForm function here
-            console.log("Email saved: ", email);
-            setEmail(""); // Clear the text input
-        } catch (err) {
-            console.error("Error saving email:", err);
+          const response = await fetch("/api/save-email", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email }),
+          });
+    
+          if (response.ok) {
+            setMessage("Email saved successfully.");
+          } else {
+            throw new Error("Error saving email.");
+          }
+        } catch (error) {
+          setMessage("Error saving email. Please try again.");
         }
     };
 
