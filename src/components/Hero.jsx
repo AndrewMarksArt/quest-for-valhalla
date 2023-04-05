@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function Hero() {
     // State for email input
     const [email, setEmail] = useState("");
+    const [showModal, setShowModal] = useState(false);
 
     const handleChange = (event) => {
         setEmail(event.target.value);
@@ -39,12 +40,22 @@ export default function Hero() {
             await response.json()
             console.log("Email saved: ", email);
             setEmail(""); // Clear the text input
+            
+            setShowModal(true); // show the thank you for signing up modal
+
         } catch (err) {
             console.error("Error saving email:", err);
-        }
-};
+        };
+    };
 
-      
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
+    const joinDiscord = () => {
+        window.open('https://discord.gg/battle-warriors', '_blank');
+    };
+
 
     return (
         <>
@@ -61,7 +72,7 @@ export default function Hero() {
                             type="email"
                             value={email}
                             onChange={handleChange}
-                            placeholder="Enter your email address" 
+                            placeholder="Enter your email or Join Discord" 
                             className="input-text"
                         />
                         <button type="submit" className="button-primary">
@@ -78,6 +89,22 @@ export default function Hero() {
                 </div>
             </div>
         </div>
+
+        {showModal && (
+            <div className="modal">
+                <div className="modal-content">
+                    <h3>Thank You!</h3>
+                    <p>Here's a sneak peek of what's coming:</p>
+                    <button className="button-secondary" onClick={joinDiscord}>
+                        Join Discord
+                    </button>
+                    <button className="modal-close" onClick={closeModal}>
+                        Close
+                    </button>
+                </div>
+            </div>
+        )}
+
         </>
     );
 }
