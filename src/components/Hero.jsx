@@ -111,7 +111,7 @@ export default function Hero() {
                         Join our Discord for a chance to win a Legendary 'Golden Quest'!
                     </p>
                     <div>
-                        <img className="modal-image" src="../public/img/goldenQuest.png" />
+                        <img className="modal-image" src="../img/goldenQuest.png" />
                     </div>
                     <button className="button-secondary" onClick={joinDiscord}>
                         Join Discord
