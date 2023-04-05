@@ -1,8 +1,8 @@
 import { google } from 'googleapis';
 
-const { VITE_GOOGLE_SERVICE_ACCOUNT_EMAIL, VITE_GOOGLE_PRIVATE_KEY } = import.meta.env;
+const { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY } = process.env;
 const GOOGLE_SHEET_ID = '18ObK-OYuV9gDfSllCZ-bSmXeZijWrkGx6X7u-zgiUT0';
-const GOOGLE_SHEET_NAME = 'Sheet1';
+const GOOGLE_SHEET_NAME = 'Quests for Valhalla - Early Access';
 
 const sheets = google.sheets({ version: 'v4', auth: GOOGLE_SERVICE_ACCOUNT_EMAIL });
 
