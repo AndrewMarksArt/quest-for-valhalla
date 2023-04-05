@@ -1,6 +1,6 @@
 import "../css/main.css"
 import { useState } from "react";
-import { uploadEmailToS3 } from "../s3";
+
 
 
 export default function Hero() {
@@ -27,7 +27,6 @@ export default function Hero() {
         console.log("Submitting email:", email);
 
         try {
-            
             console.log("Email saved: ", email);
             setEmail(""); // Clear the text input
         } catch (err) {
