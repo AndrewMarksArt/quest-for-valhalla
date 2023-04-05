@@ -289,7 +289,7 @@ body, html {
 
     .button-primary {
         border-radius: 8px;
-        width: 40vw;
+        width: 48vw;
         height: 2.5rem;
         box-shadow: none;
         font-size: 1rem;
@@ -298,7 +298,7 @@ body, html {
 
     .button-secondary {
         border-radius: 8px;
-        width: 40vw;
+        width: 48vw;
         height: 2.5rem;
         box-shadow: none;
         font-size: 1rem;
@@ -310,7 +310,7 @@ body, html {
         border-radius: 20px;
         max-width: 60vw;
         width: 80%;
-        height: 60vh;
+        height: fit-content;
     }
     
     .modal-title {
@@ -319,7 +319,7 @@ body, html {
         color: var(--clr-main);
         font-size: 2rem;
         line-height: .5rem;
-        margin-top: 3rem;
+        margin-top: 1rem;
     }
     
     .modal-msg {
@@ -327,19 +327,19 @@ body, html {
         font-family: var(--ff-primary);
         color: var(--clr-main);
         font-size: 1rem;
-        line-height: 1.5rem;
+        line-height: 1.2rem;
         margin-left: 1rem;
         margin-right: 1rem;
     }
     
     .modal-image {
-        max-width: 40vw;
-        margin-bottom: 2rem;
+        max-width: 36vw;
+        margin-bottom: 1.5rem;
     }
 
     .modal-close {
         border-radius: 8px;
-        width: 40vw;
+        width: 48vw;
         height: 2.5rem;
         box-shadow: none;
         font-size: 1rem;
