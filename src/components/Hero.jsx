@@ -1,8 +1,6 @@
 import "../css/main.css"
 import { useState } from "react";
 
-
-
 export default function Hero() {
     // State for email input
     const [email, setEmail] = useState('');
