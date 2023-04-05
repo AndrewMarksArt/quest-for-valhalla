@@ -203,7 +203,7 @@ body, html {
     text-align: center;
     max-width: 40vw;
     width: 80%;
-    height: 75vh;
+    height: fit-content;
 }
 
 .modal-title {
@@ -310,7 +310,6 @@ body, html {
         border-radius: 20px;
         max-width: 60vw;
         width: 80%;
-        height: fit-content;
     }
     
     .modal-title {
@@ -398,7 +397,6 @@ body, html {
         border-radius: 20px;
         max-width: 60vw;
         width: 80%;
-        height: 80vh;
     }
     
     .modal-title {
@@ -483,7 +481,6 @@ body, html {
         border-radius: 20px;
         max-width: 60vw;
         width: 80%;
-        height: 70vh;
     }
     
     .modal-title {
@@ -544,7 +541,6 @@ body, html {
         border-radius: 20px;
         max-width: 60vw;
         width: 80%;
-        height: 70vh;
     }
     
     .modal-title {
