@@ -27,7 +27,7 @@ export default function Hero() {
         console.log("Submitting email:", email);
 
         try {
-            await uploadEmailToS3(email);
+            
             console.log("Email saved: ", email);
             setEmail(""); // Clear the text input
         } catch (err) {
