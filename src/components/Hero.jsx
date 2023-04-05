@@ -107,7 +107,7 @@ export default function Hero() {
                 <div className="modal-content">
                     <h3 className="modal-title">Thank You!</h3>
                     <p className="modal-msg">
-                        We'll send an eamil to confirm your early access soon! Come 
+                        We'll send an email to confirm your early access soon! Come 
                         Join our Discord for a chance to win a Legendary 'Golden Quest'!
                     </p>
                     <div>
