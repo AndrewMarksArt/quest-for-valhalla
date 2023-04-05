@@ -347,8 +347,6 @@ body, html {
 
 }
 
-
-
 /* Small device styles */
 @media screen and (min-width: 577px) and (max-width: 768px) {
     .navbar-links {
@@ -382,12 +380,12 @@ body, html {
     .button-primary {
         margin-bottom: .2rem;
         width: 40vw;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .button-secondary {
         width: 40vw;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .main-img {
@@ -400,7 +398,7 @@ body, html {
         border-radius: 20px;
         max-width: 60vw;
         width: 80%;
-        height: 60vh;
+        height: 80vh;
     }
     
     .modal-title {
@@ -432,7 +430,7 @@ body, html {
         width: 40vw;
         height: 3rem;
         box-shadow: none;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
   }
   

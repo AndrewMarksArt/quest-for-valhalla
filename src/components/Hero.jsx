@@ -84,7 +84,7 @@ export default function Hero() {
                             type="email"
                             value={email}
                             onChange={handleChange}
-                            placeholder="Enter your email or Join Discord" 
+                            placeholder="Enter email or Join Discord" 
                             className="input-text"
                         />
                         <button type="submit" className="button-primary">
