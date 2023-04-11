@@ -158,6 +158,17 @@ body, html {
     transform: translate(.1rem, .1rem);
 }
 
+.join-clicked {
+    background-color: var(--clr-alt-hover);
+    color: var(--clr-alt-second);
+}
+
+.button-primary:hover {
+    box-shadow: 0rem 0rem 0px var(--clr-main-hover);
+    transform: translate(0rem, 0rem);
+}
+  
+
 .button-secondary {
     background-color: var(--clr-alt-main);
     color: var(--clr-alt-second);

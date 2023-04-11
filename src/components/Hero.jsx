@@ -7,6 +7,8 @@ export default function Hero() {
     const [showModal, setShowModal] = useState(false);
     const [showErrorModal, setShowErrorModal] = useState(false);
     const [sending, setSending] = useState(false);
+    const [joinClicked, setJoinClicked] = useState(false);
+
 
     const handleChange = (event) => {
         setEmail(event.target.value);
@@ -30,6 +32,7 @@ export default function Hero() {
         const apiKey = import.meta.env.VITE_NOCODE_API;
 
         try {
+            setJoinClicked(true);
             setSending(true);
             const response = await fetch(
                 apiKey, {
@@ -45,13 +48,11 @@ export default function Hero() {
                 setShowModal(true);
                 setSending(false);
                 setEmail("");
+                setJoinClicked(false);
             } else {
                 setSending(false);
                 setShowErrorModal(true);
             }
-            // await response.json()
-            // setShowModal(true);
-            // setEmail(""); // Clear the text input
             
         } catch (err) {
             console.error("Error saving email:", err);
@@ -87,8 +88,8 @@ export default function Hero() {
                             placeholder="Enter email or Join Discord" 
                             className="input-text"
                         />
-                        <button type="submit" className="button-primary">
-                                Get Early Access!
+                        <button type="submit" className={`button-primary ${joinClicked ? "join-clicked" : ""}`}>
+                            {joinClicked ? "Thanks, Please Wait" : "Get Early Access!"}
                         </button>
                         <button 
                             type="button" 
