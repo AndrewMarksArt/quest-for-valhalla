@@ -2,13 +2,11 @@ import "../css/main.css"
 import { useState } from "react";
 
 export default function Hero() {
-    // State for email input
     const [email, setEmail] = useState("");
     const [showModal, setShowModal] = useState(false);
     const [showErrorModal, setShowErrorModal] = useState(false);
     const [sending, setSending] = useState(false);
     const [joinClicked, setJoinClicked] = useState(false);
-
 
     const handleChange = (event) => {
         setEmail(event.target.value);
