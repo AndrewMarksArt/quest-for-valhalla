@@ -160,12 +160,28 @@ body, html {
 
 .join-clicked {
     background-color: var(--clr-alt-hover);
-    color: var(--clr-alt-second);
+    color: var(--clr-main-bg);
+    outline: .1rem solid var(--clr-alt-second);
+    border-radius: 10px;
+    min-width: 18vw;
+    height: 3rem;
+    box-shadow: none;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: .5rem;
+}
+
+.join-clicked:hover {
+    box-shadow: 0rem 0rem 0px var(--clr-main-hover);
+    transform: translate(0rem, 0rem);
 }
 
 .button-primary:hover {
-    box-shadow: 0rem 0rem 0px var(--clr-main-hover);
-    transform: translate(0rem, 0rem);
+    box-shadow: .3rem .3rem 0px var(--clr-main-hover);
+    transform: translate(-.3rem, -.3rem);
 }
   
 

@@ -86,7 +86,7 @@ export default function Hero() {
                             placeholder="Enter email or Join Discord" 
                             className="input-text"
                         />
-                        <button type="submit" className={`button-primary ${joinClicked ? "join-clicked" : ""}`}>
+                        <button type="submit" className={`${joinClicked ? "join-clicked" : "button-primary"}`}>
                             {joinClicked ? "Thanks, Please Wait" : "Get Early Access!"}
                         </button>
                         <button 
