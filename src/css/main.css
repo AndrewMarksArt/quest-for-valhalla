@@ -16,6 +16,7 @@
     --clr-alt-second: #15511D;
     --clr-main-hover: #F16D1B;
     --clr-alt-hover: #36cd84;
+    --clr-text-body: #f1b06b;
 
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
@@ -44,7 +45,7 @@ body, html {
 }
 
 .navbar-link{
-    color: #FDE7D5;
+    color: var(--clr-main);
     text-decoration: none;
     margin-left: 2rem;
     font-size: 1.5rem;
@@ -106,6 +107,30 @@ body, html {
     font-weight: var(--fw-light);
     font-family: var(--ff-primary);
     font-size: 1.5rem;
+    color: var(--clr-text-body);
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.explore-text {
+    text-align: center;
+    font-weight: var(--fw-light);
+    font-family: var(--ff-primary);
+    font-size: 1.5rem;
+    color: var(--clr-text-body);
+    margin-top: -7rem;
+}
+
+.arrow-down {
+    position: absolute;
+    width: 2vw;
+    margin-top: -3rem
 }
 
 .input-text {

@@ -71,7 +71,7 @@ export default function Hero() {
     return (
         <>
         <div className="main">
-            <img src="../img/title.png" className="title"></img>
+            <img src="../img/title_alt.png" className="title"></img>
             <h2 className="subhead">
                 Embark on a legendary quest for glory & honor! Let the sagas sing of your triumph against the fearsome foes that threaten the realm!
             </h2>
@@ -98,6 +98,10 @@ export default function Hero() {
                         </button>
                     </form>
                 </div>
+            </div>
+            <div className="bottom-container">
+                <h2 className="explore-text">Explore Below Before Embarking on Your Adventure!</h2>
+                <img src="../img/arrow_down.png" className="arrow-down"></img>
             </div>
         </div>
 
