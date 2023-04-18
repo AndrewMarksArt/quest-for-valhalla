@@ -2,6 +2,9 @@ import "../css/info.css"
 import { useState } from "react";
 
 export default function InfoSection() {
+    const tweet = 'A dark force threatens the realm...\n\nWill you be the warrior to save us?\n\njoin us on discord and follow us @BattleVikingNFT for a chance to win the legendary Golden Quest\n\nhttps://discord.gg/battle-warriors\n\nhttps://twitter.com/andrewmarksart/status/1644387986656616448/photo/1';
+    const hashtags = 'BeTheWarrior,GoldenQuest';
+
     return (
         <>
             <div className="info-section">
@@ -30,6 +33,9 @@ export default function InfoSection() {
                         </ul>
                 </div>
             </div>
+            <a className="twitter-share-button"
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}&hashtags=${hashtags}`} 
+                target="_blank"> Tweet </a>
         </div>
         </>
     );
