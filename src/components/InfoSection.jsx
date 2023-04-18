@@ -2,7 +2,7 @@ import "../css/info.css"
 import { useState } from "react";
 
 export default function InfoSection() {
-    const tweet = 'A dark force threatens the realm...\n\nWill you be the warrior to save us?\n\njoin us on discord and follow us @BattleVikingNFT for a chance to win the legendary Golden Quest\n\nhttps://discord.gg/battle-warriors\n\nhttps://twitter.com/andrewmarksart/status/1644387986656616448/photo/1';
+    const tweet = 'I just signed up for early access! ⚔️🛡️\n\nCome check out this upcoming P2E tactics game 🎮, join the discord and follow @BattleVikingNFT for a chance to win a legendary Golden Quest!🏆\n\nhttps://discord.gg/battle-warriors\n\nhttps://twitter.com/andrewmarksart/status/1636919962827649026/photo/1\n\n';
     const hashtags = 'BeTheWarrior,GoldenQuest';
 
     return (
@@ -33,9 +33,20 @@ export default function InfoSection() {
                         </ul>
                 </div>
             </div>
-            <a className="twitter-share-button"
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}&hashtags=${hashtags}`} 
-                target="_blank"> Tweet </a>
+            <div className="share-on-twitter">
+                <h1>
+                    Help us spread the word! 
+                    Share your Early Access with your friends and be entered into our contest for the Legendary Golden Quest!
+                </h1>
+                <img src="../img/goldenQuest.png" className="info-golden-quest"/>
+
+                <button className="twitter-share-button">
+                    <a className="twitter-link"
+                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}&hashtags=${hashtags}`} 
+                        target="_blank"> Tweet 
+                    </a>
+                </button>
+            </div>
         </div>
         </>
     );

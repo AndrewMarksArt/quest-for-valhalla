@@ -81,3 +81,36 @@
     border-bottom: .1rem solid var(--clr-text-link);
     padding-bottom: .2rem;
 }
+
+.twitter-share-button {
+    background-color: var(--clr-main);
+    outline: .1rem solid var(--clr-second);
+    border-radius: 10px;
+    min-width: 18vw;
+    height: 3rem;
+    box-shadow: none;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: .75rem;
+    margin-top: .5rem;
+    margin-bottom: 10rem;
+}
+
+.twitter-share-button:hover {
+    box-shadow: .3rem .3rem 0px var(--clr-main-hover);
+    transform: translate(-.3rem, -.3rem);
+}
+
+.twitter-share-button:active {
+    box-shadow: none;
+    transform: translate(.1rem, .1rem);
+}
+
+.twitter-link {
+    text-decoration: none;
+    color: var(--clr-second);
+}
+
