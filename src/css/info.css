@@ -12,7 +12,7 @@
     --clr-alt-bg: #674A38;
     --clr-main: #FDE7D5;
     --clr-second: #3C1B23;
-    --clr-alt-main: #E5F6EE;
+    --clr-alt-main: #d3f3e4;
     --clr-alt-second: #15511D;
     --clr-main-hover: #F16D1B;
     --clr-alt-hover: #36cd84;
@@ -23,19 +23,35 @@
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
-@keyframes bounce-flip {
-    0%, 100% {
-      transform: translateY(0) rotateY(0deg);
+@keyframes flip {
+    0% {
+      transform: perspective(600px) rotateY(0deg) translateY(15px);
     }
-    33% {
-      transform: translateY(-30px) rotateY(180deg);
+    50% {
+      transform: perspective(600px) rotateY(180deg) translateY(-30px);
     }
-    66% {
-      transform: translateY(0) rotateY(360deg);
+    100% {
+      transform: perspective(600px) rotateY(360deg) translateY(15px);
     }
-    
   }
-  
+
+  @keyframes bounce {
+    0% {
+        transform: translateY(15px) scale(.75);
+    }
+    25% {
+        transform: scaleX(0.3) scaleY(0.6);
+    }
+    50% {
+        transform: translateY(-30px) scaleX(1) scale(.75);
+    }
+    75% {
+        transform: scaleX(0.3) scaleY(0.6);
+    }
+    100% {
+        transform: translateY(15px) scale(.75);
+    }
+  }
 
 .info-section {
     display: flex;
@@ -72,34 +88,47 @@
 }
 
 .bullet-points {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem 5rem;
+    justify-items: stretch;
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+    max-width: 80vw;
 }
 
-.column {
-    flex: 1;
-    padding: 0 1rem;
+.point {
     text-align: left;
 }
 
 .info-bullet {
-    color: var(--clr-text-body);
-    font-size: 1.25rem;
-    padding-bottom: .5rem;
+  color: var(--clr-text-body);
+  font-size: 1.25rem;
+  position: relative;
+  padding-left: 1.5em; /* Adjust the left padding to create space for the custom bullet point */
 }
+
+.info-bullet::before {
+  content: '•';
+  position: absolute;
+  left: 0; 
+  color: var(--clr-text-body);
+}
+
 
 .info-bullet-link {
     text-decoration: none;
     font-family: var(--ff-primary);
     color: var(--clr-text-link);
-    border-bottom: .1rem solid var(--clr-text-link);
-    padding-bottom: .2rem;
+    border-bottom: 0.1rem solid var(--clr-text-link);
+    padding-bottom: 0.2rem;
 }
+  
 
 .twitter-share-button {
     background-color: var(--clr-alt-main);
-    outline: .1rem solid var(--clr-alt-second);
+    outline: .15rem solid var(--clr-alt-second);
     border-radius: 10px;
     min-width: 18vw;
     height: 3rem;
@@ -112,13 +141,14 @@
     padding-top: .5rem;
     margin-top: .5rem;
     margin-bottom: 10rem;
-    text-decoration: none;
     color: var(--clr-alt-second);
+    z-index: 100;
+    text-decoration: none;
 }
 
 .twitter-share-button:hover {
-    box-shadow: .3rem .3rem 0px var(--clr-alt-hover);
-    transform: translate(-.3rem, -.3rem);
+    box-shadow: .4rem .4rem 0px var(--clr-alt-hover);
+    transform: translate(-.4rem, -.4rem);
 }
 
 .twitter-share-button:active {
@@ -126,9 +156,27 @@
     transform: translate(.1rem, .1rem);
 }
 
+.gold-quest-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    margin-bottom: -4rem;
+    margin-top: -5rem;
+}
+
+.back-glow {
+    position: absolute;
+    height: 100%;
+    max-width: 20vw;
+    animation: bounce 5s infinite;
+}
+
 .info-golden-quest {
     height: 100%;
     max-width: 20vw;
-    margin: -4rem;
-    animation: bounce-flip 4s infinite;
+    position: absolute;
+    z-index: 2;
+    animation: flip 5s infinite;
 }
