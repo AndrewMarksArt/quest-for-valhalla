@@ -76,7 +76,7 @@ body, html {
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 60px);
-    margin-top: -110px;
+    margin-top: -7rem;
 }
 
 .main-img {
@@ -106,7 +106,6 @@ body, html {
     margin: 12px 20vw 32px 20vw;
     font-weight: var(--fw-light);
     font-family: var(--ff-primary);
-    font-size: 1.5rem;
     color: var(--clr-text-body);
 }
 
@@ -122,15 +121,15 @@ body, html {
     text-align: center;
     font-weight: var(--fw-light);
     font-family: var(--ff-primary);
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--clr-text-body);
-    margin-top: -7rem;
+    margin-top: -10rem;
 }
 
 .arrow-down {
     position: absolute;
-    width: 2vw;
-    margin-top: -3rem
+    width: 3vw;
+    margin-top: -6rem
 }
 
 .input-text {
@@ -396,6 +395,26 @@ body, html {
         font-size: 1rem;
     }
 
+    .explore-text {
+        text-align: center;
+        font-weight: var(--fw-light);
+        font-family: var(--ff-primary);
+        font-size: 1.5rem;
+        color: var(--clr-text-body);
+        margin-top: -18rem;
+        z-index: 100;
+    }
+    
+    .arrow-down {
+        position: absolute;
+        width: 7vw;
+        margin-top: -10rem
+    }
+
+    .container {
+        margin-top: -10rem;
+    }
+
 }
 
 /* Small device styles */
@@ -482,6 +501,25 @@ body, html {
         box-shadow: none;
         font-size: 1rem;
     }
+
+    .explore-text {
+        text-align: center;
+        font-weight: var(--fw-light);
+        font-family: var(--ff-primary);
+        font-size: 1.5rem;
+        color: var(--clr-text-body);
+        margin-top: -15rem;
+    }
+    
+    .arrow-down {
+        position: absolute;
+        width: 5vw;
+        margin-top: -10rem
+    }
+
+    .container {
+        margin-top: -10rem;
+    }
   }
   
   /* medium device styles */
@@ -566,6 +604,20 @@ body, html {
         box-shadow: none;
         font-size: 1.5rem;
     }
+
+    .explore-text {
+        text-align: center;
+        font-weight: var(--fw-light);
+        font-family: var(--ff-primary);
+        font-size: 1.75rem;
+        color: var(--clr-text-body);
+        margin-top: -10rem;
+    }
+    
+    .arrow-down {
+        position: absolute;
+        width: 5vw;
+    }
   }
 
   /* Large device styles */
@@ -625,6 +677,21 @@ body, html {
         height: 3rem;
         box-shadow: none;
         font-size: 1.5rem;
+    }
+
+    .explore-text {
+        text-align: center;
+        font-weight: var(--fw-light);
+        font-family: var(--ff-primary);
+        font-size: 1.75rem;
+        color: var(--clr-text-body);
+        margin-top: -10rem;
+    }
+    
+    .arrow-down {
+        position: absolute;
+        width: 4vw;
+        margin-top: -6rem;
     }
   }
   

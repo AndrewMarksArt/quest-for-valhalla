@@ -75,14 +75,14 @@
 }
 
 .headline {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin: 1rem 0;
     color: var(--clr-main);
     max-width: 50vw;
 }
 
 .subhead {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-top: .5rem;
     margin-bottom: 1.5rem;
 }
@@ -95,7 +95,7 @@
     justify-items: stretch;
     margin-bottom: 5rem;
     margin-top: 1rem;
-    max-width: 80vw;
+    max-width: 70vw;
 }
 
 .point {
@@ -104,7 +104,7 @@
 
 .info-bullet {
   color: var(--clr-text-body);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   position: relative;
   padding-left: 1.5em; /* Adjust the left padding to create space for the custom bullet point */
 }
@@ -135,12 +135,12 @@
     box-shadow: none;
     font-family: var(--ff-primary);
     font-weight: var(--fw-bold);
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    padding-top: .5rem;
+    padding-bottom: .25rem;
     margin-top: .5rem;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     color: var(--clr-alt-second);
     z-index: 100;
     text-decoration: none;
@@ -169,14 +169,192 @@
 .back-glow {
     position: absolute;
     height: 100%;
-    max-width: 20vw;
+    max-width: 30vw;
     animation: bounce 5s infinite;
 }
 
 .info-golden-quest {
     height: 100%;
-    max-width: 20vw;
+    max-width: 30vw;
     position: absolute;
     z-index: 2;
     animation: flip 5s infinite;
+}
+
+/* extra small screens */
+@media screen and  (max-width: 576px) {
+    .info-section {
+        margin-top: -2rem;
+    }
+    .info-logo {
+        max-width: 80vw;
+    }
+
+    .headline {
+        font-size: 2rem;
+        max-width: 80vw;
+    }
+
+    .subhead {
+        max-width: 80vw;
+    }
+
+    .info-quest-cards {
+        max-width: 70vw;
+    }
+
+    .bullet-points {
+        gap: 1rem 2rem;
+        max-width: 80vw;
+    }
+
+    .info-bullet {
+        font-size: 1.25rem;
+        padding-left: 1rem;
+    }
+
+    .back-glow {
+        max-width: 60vw;
+    }
+    
+    .info-golden-quest {
+        max-width: 60vw;
+    }
+
+    .twitter-share-button {
+        font-size: 1.5rem;
+        height: 2.25rem;
+    }
+}
+
+/* Small device styles */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .info-section {
+        margin-top: -2rem;
+    }
+    .info-logo {
+        max-width: 80vw;
+    }
+
+    .headline {
+        font-size: 2rem;
+        max-width: 80vw;
+    }
+
+    .subhead {
+        max-width: 80vw;
+    }
+
+    .info-quest-cards {
+        max-width: 70vw;
+    }
+
+    .bullet-points {
+        gap: 1rem 2rem;
+        max-width: 80vw;
+    }
+
+    .info-bullet {
+        font-size: 1.25rem;
+        padding-left: 1rem;
+    }
+
+    .back-glow {
+        max-width: 60vw;
+    }
+    
+    .info-golden-quest {
+        max-width: 60vw;
+    }
+
+    .twitter-share-button {
+        font-size: 1.5rem;
+        height: 2.25rem;
+    }
+}
+
+/* medium device styles */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .info-logo {
+        max-width: 80vw;
+    }
+
+    .headline {
+        font-size: 2rem;
+        max-width: 80vw;
+    }
+
+    .subhead {
+        max-width: 80vw;
+    }
+
+    .info-quest-cards {
+        max-width: 70vw;
+    }
+
+    .bullet-points {
+        gap: 1rem 5rem;
+        max-width: 80vw;
+    }
+
+    .info-bullet {
+        font-size: 1.5rem;
+        padding-left: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .back-glow {
+        max-width: 60vw;
+    }
+    
+    .info-golden-quest {
+        max-width: 60vw;
+    }
+
+}
+
+/* Large device styles */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .info-logo {
+        max-width: 80vw;
+    }
+
+    .headline {
+        font-size: 2.5rem;
+        max-width: 80vw;
+    }
+
+    .subhead {
+        max-width: 80vw;
+        font-size: 1.5rem;
+    }
+
+    .info-quest-cards {
+        max-width: 70vw;
+    }
+
+    .bullet-points {
+        gap: 1rem 5rem;
+        max-width: 80vw;
+        margin-bottom: 4rem;
+    }
+
+    .info-bullet {
+        font-size: 1.5rem;
+        padding-left: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .back-glow {
+        max-width: 60vw;
+    }
+    
+    .info-golden-quest {
+        max-width: 60vw;
+    }
+
+    .gold-quest-container {
+        margin-top: -3rem;
+    }
+
 }
