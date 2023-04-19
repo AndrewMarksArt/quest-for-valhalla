@@ -322,13 +322,13 @@ body, html {
     }
 
     .title {
-        max-width: 70vw;
+        max-width: 80vw;
     }
 
     .subhead {
         margin-left: 24px;
         margin-right: 24px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-bottom: 0px;
         line-height: 2rem;
     }
@@ -399,16 +399,16 @@ body, html {
         text-align: center;
         font-weight: var(--fw-light);
         font-family: var(--ff-primary);
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         color: var(--clr-text-body);
-        margin-top: -18rem;
+        margin-top: -12rem;
         z-index: 100;
     }
     
     .arrow-down {
         position: absolute;
         width: 7vw;
-        margin-top: -10rem
+        margin-top: -7rem
     }
 
     .container {
