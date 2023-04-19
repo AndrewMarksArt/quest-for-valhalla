@@ -2,7 +2,7 @@ import "../css/info.css"
 import { useState } from "react";
 
 export default function InfoSection() {
-    const tweet = 'I just signed up for early access! ⚔️🛡️\n\nCome check out this upcoming P2E tactics game 🎮, join the discord and follow @BattleVikingNFT for a chance to win a legendary Golden Quest!🏆\n\nhttps://discord.gg/battle-warriors\n\nhttps://twitter.com/andrewmarksart/status/1636919962827649026/photo/1\n\n';
+    const tweet = 'I just signed up for early access! ⚔️🛡️\n\nCome check out this upcoming P2E tactics game 🎮, join the discord and follow @BattleVikingNFT for a chance to win a legendary Golden Quest!🏆\n\nhttps://discord.gg/battle-warriors\n\nhttps://twitter.com/andrewmarksart/status/1636919962827649026/photo/1';
     const hashtags = 'BeTheWarrior,GoldenQuest';
 
     return (
@@ -33,19 +33,19 @@ export default function InfoSection() {
                         </ul>
                 </div>
             </div>
-            <div className="share-on-twitter">
-                <h1>
-                    Help us spread the word! 
-                    Share your Early Access with your friends and be entered into our contest for the Legendary Golden Quest!
+            <div className="info-section">
+                <h1 className="headline">
+                    Help us spread the word!
                 </h1>
-                <img src="../img/goldenQuest.png" className="info-golden-quest"/>
+                <h2 className="subhead">
+                    Share your Early Access with your friends on Twitter for a chance to win a Legendary Golden Quest!
+                </h2>
+                <img src="../img/small_golden_quest.png" className="info-golden-quest"/>
 
-                <button className="twitter-share-button">
-                    <a className="twitter-link"
-                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}&hashtags=${hashtags}`} 
-                        target="_blank"> Tweet 
-                    </a>
-                </button>
+                <a className="twitter-share-button"
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}&hashtags=${hashtags}`} 
+                    target="_blank"> Tweet and Win!
+                </a>
             </div>
         </div>
         </>
