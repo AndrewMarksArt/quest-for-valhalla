@@ -2,7 +2,8 @@ import "../css/gallery.css";
 import React, { useState } from 'react';
 
 export default function Gallery({images, descriptions}) {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const midIndex = Math.floor(images.length /2);
+    const [currentImageIndex, setCurrentImageIndex] = useState(midIndex);
 
     const handleNext = ()=> {
         setCurrentImageIndex((currentImageIndex + 1) % images.length);
@@ -15,6 +16,7 @@ export default function Gallery({images, descriptions}) {
     return (
         <>
         <div className="carousel">
+            <img src="../img/quest_gallery_title.png" className="carousel-title-img" />
             <div className="carousel-images">
                 {images.map((image, index) => (
                 <img
