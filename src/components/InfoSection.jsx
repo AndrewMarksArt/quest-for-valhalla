@@ -1,5 +1,4 @@
 import "../css/info.css"
-import { useState } from "react";
 
 export default function InfoSection() {
     const tweet = 'I just signed up for early access! ⚔️🛡️\n\nCome check out this upcoming P2E tactics game 🎮, join the discord and follow @BattleVikingNFT for a chance to win a legendary Golden Quest!🏆\n\nhttps://discord.gg/battle-warriors\n\nhttps://twitter.com/andrewmarksart/status/1636919962827649026/photo/1';
