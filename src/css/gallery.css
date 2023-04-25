@@ -36,17 +36,31 @@
     align-items: center;
     justify-content: center;
   }
+
+  .carousel-image {
+    object-fit: cover;
+    max-height: 50vh;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
   
   .carousel-main-image {
     max-height: 50vh;
     object-fit: cover;
+    transform: translateX(50%);
+  }
+
+  .side-image {
+    max-height: 45vh;
   }
   
-  .carousel-arrow {
+ .carousel-arrow {
     background-color: transparent;
     border: none;
     font-size: 2rem;
     cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
   }
   
   .left-arrow {

@@ -17,7 +17,18 @@ export default function Gallery({images, descriptions}) {
         <div className="carousel">
             <div className="carousel-images">
                 <button className="carousel-arrow left-arrow" onClick={handlePrevious}>&lt;</button>
-                <img src={images[currentImageIndex]} className="carousel-main-image" />
+                {/*<img src={images[currentImageIndex]} className="carousel-main-image" />*/}
+                {images.map((image, index) => (
+                    <img
+                        key={index}
+                        src={image}
+                        className={`carousel-image ${index === currentImageIndex ? 'main-image' : 'side-image'}`}
+                        style={{
+                            opacity: index === currentImageIndex ? 1 : 0.6,
+                            zIndex: index === currentImageIndex ? 2 : 1,
+                        }}
+                    />
+                ))}
                 <button className="carousel-arrow right-arrow" onClick={handleNext}>&gt;</button>
             </div>
 
