@@ -29,23 +29,27 @@
     background-color: #191A24;
     padding-top: 2rem;
     padding-bottom: 5rem;
+    overflow: hidden;
   }
   
   .carousel-images {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    height: 30vw;
   }
 
   .carousel-image {
+    position: absolute;
     object-fit: cover;
     max-height: 50vh;
     transition: transform 0.5s ease, opacity 0.5s ease;
+    padding: 1rem;
   }
   
   .carousel-main-image {
     max-height: 50vh;
-    object-fit: cover;
     transform: translateX(50%);
   }
 
@@ -58,17 +62,23 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 3;
   }
   
   .left-arrow {
     margin-right: 1rem;
+    left: calc(50% - 35vw);
+    transform: translateY(-50%);
+    color: #FDE7D5;
   }
   
   .right-arrow {
     margin-left: 1rem;
+    right: calc(50% - 35vw);
+    transform: translateY(-50%);
+    color: #FDE7D5;
   }
   
   .carousel-dots {

@@ -9,9 +9,21 @@ export default function App() {
         '../img/gallery/ghost-gallery-card.png',
         '../img/gallery/fire-element-gallery-card.png',
         '../img/gallery/tiger-cub-gallery-card.png',
+        '../img/gallery/ghost-gallery-card.png',
+        '../img/gallery/fire-element-gallery-card.png',
+        '../img/gallery/tiger-cub-gallery-card.png',
+        '../img/gallery/ghost-gallery-card.png',
+        '../img/gallery/fire-element-gallery-card.png',
+        '../img/gallery/tiger-cub-gallery-card.png',
     ];
 
     const descriptions = [
+        'here are the ghost quests.',
+        'here are the elemental quests.',
+        'here are the tiger quests.',
+        'here are the ghost quests.',
+        'here are the elemental quests.',
+        'here are the tiger quests.',
         'here are the ghost quests.',
         'here are the elemental quests.',
         'here are the tiger quests.',
