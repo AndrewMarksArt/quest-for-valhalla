@@ -35,7 +35,7 @@
   .carousel-title-img {
     display: block;
     margin: 0 auto;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     max-width: 100%;
   }
   
@@ -52,7 +52,7 @@
     object-fit: cover;
     max-height: 50vh;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    padding: 1rem;
+    padding: 2rem;
   }
   
   .carousel-main-image {
@@ -87,11 +87,16 @@
     transform: translateY(-50%);
     color: #FDE7D5;
   }
+
+  .left-img, .right-img {
+    width: 3vw;
+  }
   
   .carousel-dots {
     display: flex;
     justify-content: center;
     padding: 1rem 0;
+    
   }
   
   .carousel-dot {
@@ -100,7 +105,7 @@
     background-color: var(--clr-main);
     margin: 0 12px;
     transform: rotate(45deg);
-    opacity: 0.6;
+    opacity: 0.4;
   }
   
   .carousel-dot.active {
@@ -113,25 +118,68 @@
     justify-content: center;
     align-items: center;
     max-width: 40vw;
-    margin: 0 auto;
+    margin: .5rem auto;
     position: relative;
   }
+
+  .description-text::-webkit-scrollbar-button {
+    background-color: var(--clr-second);
+  }
   
-  .carousel-background {
-    width: 100%;
+  .description-background {
+    max-width: 40vw;
     height: auto;
     z-index: 1;
   }
   
   .description-text {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
-    width: 100%;
+    width: 80%;
+    height: 20vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    padding-right: 8px;
+
+    font-family: var(--ff-primary);
+    font-size: 1.2rem;
+    color: var(--clr-main-bg);
+    font-weight: var(--fw-med);
   }
+
+  .description-title {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 80%;
+    height: 20vh;
+
+    font-family: var(--ff-primary);
+    font-size: 1.5rem;
+    font-weight: var(--fw-semi);
+    color: var(--clr-main-bg);
+  }
+
+  .description-text::-webkit-scrollbar {
+    width: 8px;
+    background-color: #8d7464;
+  }
+
+  .description-text::-webkit-scrollbar-button {
+    height: 0;
+  }
+
+  .description-text::-webkit-scrollbar-thumb {
+    background-color:#3d2014;
+  }
+
   
   
   

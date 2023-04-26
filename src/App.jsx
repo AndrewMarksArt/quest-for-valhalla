@@ -9,12 +9,12 @@ export default function App() {
         '../img/gallery/ghost-gallery-card.png',
         '../img/gallery/fire-element-gallery-card.png',
         '../img/gallery/tiger-cub-gallery-card.png',
-        '../img/gallery/ghost-gallery-card.png',
-        '../img/gallery/fire-element-gallery-card.png',
-        '../img/gallery/tiger-cub-gallery-card.png',
-        '../img/gallery/ghost-gallery-card.png',
-        '../img/gallery/fire-element-gallery-card.png',
-        '../img/gallery/tiger-cub-gallery-card.png',
+        '../img/gallery/skeleton-gallery-card.png',
+        '../img/gallery/dragon-gallery-card.png',
+        '../img/gallery/goblin-gallery-card.png',
+        '../img/gallery/manticore-gallery-card.png',
+        '../img/gallery/faerie-gallery-card.png',
+        '../img/gallery/kobold-gallery-card.png',
     ];
 
     const descriptions = [
@@ -22,11 +22,23 @@ export default function App() {
         'here are the elemental quests.',
         'here are the tiger quests.',
         'here are the ghost quests.',
-        'here are the elemental quests.',
+        'here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.here are the elemental quests.',
         'here are the tiger quests.',
         'here are the ghost quests.',
         'here are the elemental quests.',
         'here are the tiger quests.',
+    ];
+
+    const titles = [
+        'Ghosts & Spirits',
+        'Elementals',
+        'Tigers',
+        'Ghosts & Spirits',
+        'Elementals',
+        'Tigers',
+        'Ghosts & Spirits',
+        'Elementals',
+        'Tigers',
     ];
 
     return (
@@ -34,7 +46,7 @@ export default function App() {
             <Navbar />
             <Hero />
             <InfoSection />
-            <Gallery images={images} descriptions={descriptions}/>
+            <Gallery images={images} titles={titles} descriptions={descriptions}/>
         </>
     );
 }

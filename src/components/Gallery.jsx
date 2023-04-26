@@ -1,7 +1,7 @@
 import "../css/gallery.css";
 import React, { useState } from 'react';
 
-export default function Gallery({images, descriptions}) {
+export default function Gallery({images, titles, descriptions}) {
     const midIndex = Math.floor(images.length /2);
     const [currentImageIndex, setCurrentImageIndex] = useState(midIndex);
 
@@ -31,8 +31,12 @@ export default function Gallery({images, descriptions}) {
                 />
                 ))}
 
-                <button className="carousel-arrow left-arrow" onClick={handlePrevious}>&lt;</button>
-                <button className="carousel-arrow right-arrow" onClick={handleNext}>&gt;</button>
+                <button className="carousel-arrow left-arrow" onClick={handlePrevious}>
+                    <img src="../img/left_arrow.png" className="left-img"/>
+                </button>
+                <button className="carousel-arrow right-arrow" onClick={handleNext}>
+                    <img src="../img/right_arrow.png" className="right-img"/>
+                </button>
             </div>
 
             <div className="carousel-dots">
@@ -43,6 +47,7 @@ export default function Gallery({images, descriptions}) {
 
             <div className="carousel-description">
                 <img src={"../img/carousel-description-bg.png"} alt="description-background" className="description-background" />
+                <p className="description-title">{titles[currentImageIndex]}</p>
                 <p className="description-text">{descriptions[currentImageIndex]}</p>
             </div>
         </div>
