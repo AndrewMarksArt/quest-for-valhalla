@@ -109,7 +109,7 @@
   }
   
   .carousel-dot.active {
-    background-color: var(--clr-main-hover);
+    background-color: var(--clr-text-body);
     opacity: 1;
   }
   
@@ -139,7 +139,7 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
-    width: 80%;
+    width: 85%;
     height: 20vh;
     overflow-y: auto;
     scrollbar-width: thin;
@@ -149,6 +149,7 @@
     font-size: 1.2rem;
     color: var(--clr-main-bg);
     font-weight: var(--fw-med);
+    line-height: 2rem;
   }
 
   .description-title {

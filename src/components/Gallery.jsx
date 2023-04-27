@@ -1,16 +1,18 @@
 import "../css/gallery.css";
 import React, { useState } from 'react';
+import gallery_data from "../data/gallery_data";
 
-export default function Gallery({images, titles, descriptions}) {
-    const midIndex = Math.floor(images.length /2);
+export default function Gallery() {
+    
+    const midIndex = Math.floor(gallery_data.length /2);
     const [currentImageIndex, setCurrentImageIndex] = useState(midIndex);
 
     const handleNext = ()=> {
-        setCurrentImageIndex((currentImageIndex + 1) % images.length);
+        setCurrentImageIndex((currentImageIndex + 1) % gallery_data.length);
     };
 
     const handlePrevious = ()=> {
-        setCurrentImageIndex((currentImageIndex -1 +images.length) % images.length);
+        setCurrentImageIndex((currentImageIndex -1 +gallery_data.length) % gallery_data.length);
     };
 
     return (
@@ -18,10 +20,10 @@ export default function Gallery({images, titles, descriptions}) {
         <div className="carousel">
             <img src="../img/quest_gallery_title.png" className="carousel-title-img" />
             <div className="carousel-images">
-                {images.map((image, index) => (
+                {gallery_data.map((item, index) => (
                 <img
-                    key={index}
-                    src={image}
+                    key={item.id}
+                    src={item.img}
                     className={`carousel-image ${index === currentImageIndex ? 'main-image' : 'side-image'}`}
                     style={{
                     opacity: index === currentImageIndex ? 1 : 0.4,
@@ -40,15 +42,15 @@ export default function Gallery({images, titles, descriptions}) {
             </div>
 
             <div className="carousel-dots">
-                {images.map((_, index) => (
+                {gallery_data.map((_, index) => (
                 <span key={index} className={`carousel-dot ${currentImageIndex === index ? 'active' : ''}`} />
                 ))}
             </div>
 
             <div className="carousel-description">
                 <img src={"../img/carousel-description-bg.png"} alt="description-background" className="description-background" />
-                <p className="description-title">{titles[currentImageIndex]}</p>
-                <p className="description-text">{descriptions[currentImageIndex]}</p>
+                <p className="description-title">{gallery_data[currentImageIndex].title}</p>
+                <p className="description-text">{gallery_data[currentImageIndex].description}</p>
             </div>
         </div>
         </>
