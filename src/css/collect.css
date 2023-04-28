@@ -59,7 +59,7 @@
     margin-bottom: 2rem;
   }
   
-  .mobile-image {
+  .collect-level-up-mobile {
     display: none;
   }
 
@@ -70,16 +70,136 @@
     border-bottom: 0.1rem solid var(--clr-text-link);
     padding-bottom: 0;
   }
-  
-  /* Add your mobile breakpoint */
-  @media screen and (max-width: 767px) {
-    .large-image {
-      display: none;
+
+  /* extra small screens */
+@media screen and  (max-width: 576px) {
+    .collect-container {
+        padding-top: 1rem;
     }
-  
-    .mobile-image {
-      display: block;
-      width: 100%;
-      max-width: 300px; /* Adjust based on your requirement */
+
+    .collect-level-up {
+        display: none;
     }
-  }
+    
+    .collect-level-up-mobile {
+        display: block;
+        width: 100%;
+        max-width: 60vw;
+        padding-top: 1.5rem;
+    }
+
+    .collect-title {
+        max-width: 80vw;
+    }
+
+    .collect-subhead, .collect-bullet {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        font-weight: var(--fw-med);
+        margin-top: 1rem;
+        color: var(--clr-text-body);
+        max-width: 80vw;
+    }
+      
+    .collect-bullets {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+}
+
+/* Small device styles */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .collect-container {
+        padding-top: 1rem;
+    }
+
+    .collect-level-up {
+        display: block;
+        width: 100%;
+        max-width: 85vw;
+        padding-top: 1.5rem;
+    }
+
+    .collect-title {
+        max-width: 80vw;
+    }
+
+    .collect-subhead, .collect-bullet {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        font-weight: var(--fw-med);
+        margin-top: 1rem;
+        color: var(--clr-text-body);
+        max-width: 80vw;
+    }
+      
+    .collect-bullets {
+        padding-bottom: 2rem;
+        
+    }
+}
+
+/* medium device styles */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .collect-container {
+        padding-top: 1rem;
+    }
+
+    .collect-level-up {
+        display: block;
+        width: 100%;
+        max-width: 80vw;
+        padding-top: 1.5rem;
+    }
+
+    .collect-title {
+        max-width: 70vw;
+    }
+
+    .collect-subhead, .collect-bullet {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: var(--fw-med);
+        margin-top: 1rem;
+        color: var(--clr-text-body);
+        max-width: 70vw;
+    }
+      
+    .collect-bullets {
+        padding-bottom: 2rem;
+    }
+
+}
+
+/* Large device styles */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .collect-container {
+        padding-top: 1rem;
+    }
+
+    .collect-level-up {
+        display: block;
+        width: 100%;
+        max-width: 75vw;
+        padding-top: 1.5rem;
+    }
+
+    .collect-title {
+        max-width: 80vw;
+    }
+
+    .collect-subhead, .collect-bullet {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: var(--fw-med);
+        margin-top: 1rem;
+        color: var(--clr-text-body);
+        max-width: 80vw;
+    }
+      
+    .collect-bullets {
+        padding-bottom: 2rem;
+        
+    }
+}
