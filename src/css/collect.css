@@ -55,12 +55,20 @@
   }
   
   .collect-level-up {
-    max-width: 70vw;
+    max-width: 60vw;
     margin-bottom: 2rem;
   }
   
   .mobile-image {
     display: none;
+  }
+
+  .collect-link {
+    text-decoration: none;
+    font-family: var(--ff-primary);
+    color: var(--clr-text-link);
+    border-bottom: 0.1rem solid var(--clr-text-link);
+    padding-bottom: 0;
   }
   
   /* Add your mobile breakpoint */

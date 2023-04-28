@@ -123,13 +123,14 @@ body, html {
     font-family: var(--ff-primary);
     font-size: 2rem;
     color: var(--clr-text-body);
-    margin-top: -10rem;
+    margin-top: -9rem;
+    z-index: 10;
 }
 
 .arrow-down {
     position: absolute;
     width: 3vw;
-    margin-top: -6rem
+    margin-top: -5.5rem
 }
 
 .input-text {

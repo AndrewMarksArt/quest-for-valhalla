@@ -9,8 +9,8 @@ export default function CollectUpgrade() {
             </h2>
             <img src="../img/level_up_goblins.png" className="collect-level-up" />
             <div className="collect-bullets">
-                <h2 className="collect-bullet">join us on Discord to learn more about all the different Quests, how to collect, upgrade, & rarities.</h2>
-                <h2 className="collect-bullet">you can see our game docs here.</h2>
+                <h2 className="collect-bullet">Join us on <a href="https://www.discord.gg/battle-warriors" target={"_blank"} className="collect-link">Discord</a> to learn more about all the different Quests, how to collect, upgrade, & all about rarities.</h2>
+                <h2 className="collect-bullet">Sign up for <a href="#" className="collect-link">early access</a> to exclussive updates & win prizes.</h2>
             </div>
         </div>
     );
