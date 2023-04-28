@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import InfoSection from "./components/InfoSection";
 import Gallery from "./components/Gallery";
 import Divider from "./components/Divider";
+import CollectUpgrade from "./components/CollectUpgrade";
 
 export default function App() {
     
@@ -13,8 +14,10 @@ export default function App() {
             <Hero />
             <InfoSection />
             <Divider />
+            <CollectUpgrade />
             <Divider />
             <Gallery />
+            <Divider />
         </>
     );
 }

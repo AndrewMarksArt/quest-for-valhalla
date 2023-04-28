@@ -1,0 +1,77 @@
+:root {
+    --ff-primary: 'Piazzolla', serif;
+
+    --fw-light: 300;
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-semi: 600;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+    --clr-main-bg: #191A24;
+    --clr-alt-bg: #674A38;
+    --clr-main: #FDE7D5;
+    --clr-second: #3C1B23;
+    --clr-alt-main: #d3f3e4;
+    --clr-alt-second: #15511D;
+    --clr-main-hover: #F16D1B;
+    --clr-alt-hover: #36cd84;
+    --clr-text-body: #f1b06b;
+    --clr-text-link: #72C19B;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+.collect-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: var(--clr-main-bg);
+    padding-top: 2rem;
+  }
+  
+  .collect-title {
+     max-width: 100%;
+  }
+  
+  .collect-subhead, .collect-bullet {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: var(--fw-med);
+    margin-top: 1rem;
+    color: var(--clr-text-body);
+    max-width: 60vw;
+  }
+  
+  .collect-bullets {
+    padding-bottom: 2rem;
+  }
+
+  .collect-bullet {
+    text-align: left;
+  }
+  
+  .collect-level-up {
+    max-width: 70vw;
+    margin-bottom: 2rem;
+  }
+  
+  .mobile-image {
+    display: none;
+  }
+  
+  /* Add your mobile breakpoint */
+  @media screen and (max-width: 767px) {
+    .large-image {
+      display: none;
+    }
+  
+    .mobile-image {
+      display: block;
+      width: 100%;
+      max-width: 300px; /* Adjust based on your requirement */
+    }
+  }
