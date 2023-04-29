@@ -194,7 +194,7 @@
 
   .carousel-title-img {
     max-width: 80vw;
-    padding-bottom: 0rem;
+    padding-bottom: 2rem;
   }
   
   .carousel-images {
@@ -217,11 +217,11 @@
   }
 
   .left-arrow {
-    left: calc(50% - 37vw);
+    left: calc(50% - 45vw);
   }
   
   .right-arrow {
-    right: calc(50% - 37vw);
+    right: calc(50% - 45vw);
   }
   
   .carousel-dots {
@@ -239,7 +239,7 @@
   
   .description-background {
     max-width: 80vw;
-    min-height: 33vh;
+    min-height: 40vh;
   }
   
   .description-text {
