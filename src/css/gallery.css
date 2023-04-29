@@ -212,16 +212,16 @@
   }
 
   .left-img, .right-img {
-    width: 10vw;
+    width: 12vw;
     padding-top: 7rem;
   }
 
   .left-arrow {
-    left: calc(50% - 40vw);
+    left: calc(50% - 37vw);
   }
   
   .right-arrow {
-    right: calc(50% - 40vw);
+    right: calc(50% - 37vw);
   }
   
   .carousel-dots {
