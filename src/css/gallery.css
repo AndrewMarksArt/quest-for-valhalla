@@ -35,7 +35,8 @@
   .carousel-title-img {
     display: block;
     margin: 0 auto;
-    padding-bottom: 1rem;
+
+    padding-top: 2rem;
     max-width: 100%;
   }
   
@@ -44,7 +45,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 30vw;
+    height: 40vw;
   }
 
   .carousel-image {
@@ -89,14 +90,14 @@
   }
 
   .left-img, .right-img {
-    width: 3vw;
+    width: 4vw;
   }
   
   .carousel-dots {
     display: flex;
     justify-content: center;
-    padding: 1rem 0;
-    
+    margin-top: -1.5rem; 
+    margin-bottom: 2rem;
   }
   
   .carousel-dot {
@@ -118,7 +119,7 @@
     justify-content: center;
     align-items: center;
     max-width: 40vw;
-    margin: .5rem auto;
+    margin: 2rem auto;
     position: relative;
   }
 
@@ -128,13 +129,14 @@
   
   .description-background {
     max-width: 40vw;
+    min-height: 35vh;
     height: auto;
     z-index: 1;
   }
   
   .description-text {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -150,12 +152,12 @@
     font-size: 1.2rem;
     color: var(--clr-main-bg);
     font-weight: var(--fw-med);
-    line-height: 2rem;
+    line-height: 1.6rem;
   }
 
   .description-title {
     position: absolute;
-    top: 28%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -165,7 +167,7 @@
     padding-top: 2rem;
 
     font-family: var(--ff-primary);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: var(--fw-semi);
     color: var(--clr-main-bg);
   }
@@ -183,6 +185,293 @@
     background-color:#3d2014;
   }
 
+    /* extra small screens */
+@media screen and  (max-width: 576px) {
+  .carousel {
+    padding-top: 0rem;
+    padding-bottom: 5rem;
+  }
+
+  .carousel-title-img {
+    max-width: 80vw;
+    padding-bottom: 0rem;
+  }
+  
+  .carousel-images {
+    height: 60vw;
+    padding-top: 2rem;
+  }
+
+  .carousel-image {
+    max-height: 45vh;
+    padding-top: 7rem;
+  }
+
+  .side-image {
+    max-height: 30vh;
+  }
+
+  .left-img, .right-img {
+    width: 10vw;
+    padding-top: 7rem;
+  }
+
+  .left-arrow {
+    left: calc(50% - 40vw);
+  }
+  
+  .right-arrow {
+    right: calc(50% - 40vw);
+  }
+  
+  .carousel-dots {
+    padding-top: 9rem;
+  }
+  
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .carousel-description {
+    max-width: 80vw;
+  }
+  
+  .description-background {
+    max-width: 80vw;
+    min-height: 33vh;
+  }
+  
+  .description-text {
+    padding-top: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    top: 40%;
+  }
+
+  .description-title {
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    top: 23%;
+  }
+}
+
+/* Small device styles */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .carousel {
+    padding-top: 0rem;
+    padding-bottom: 5rem;
+  }
+
+  .carousel-title-img {
+    max-width: 80vw;
+    padding-bottom: 1rem;
+  }
+  
+  .carousel-images {
+    height: 50vw;
+    padding-top: 2.5rem;
+  }
+
+  .carousel-image {
+    max-height: 55vh;
+    padding-top: 12rem;
+  }
+
+  .side-image {
+    max-height: 40vh;
+  }
+
+  .left-img, .right-img {
+    width: 10vw;
+    padding-top: 12rem;
+  }
+
+  .left-arrow {
+    left: calc(50% - 40vw);
+  }
+  
+  .right-arrow {
+    right: calc(50% - 40vw);
+  }
+  
+  .carousel-dots {
+    padding-top: 13rem;
+  }
+  
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .carousel-description {
+    max-width: 80vw;
+  }
+  
+  .description-background {
+    max-width: 75vw;
+    min-height: 30vh;
+  }
+  
+  .description-text {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    top: 40%;
+    max-width: 65vw;
+  }
+
+  .description-title {
+    font-size: 1.8rem;
+    font-weight: var(--fw-bold);
+    top: 20%;
+  }
+  
+}
+
+/* medium device styles */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .carousel {
+    padding-top: 0rem;
+    padding-bottom: 5rem;
+  }
+
+  .carousel-title-img {
+    max-width: 80vw;
+  }
+  
+  .carousel-images {
+    height: 50vw;
+    padding-top: 1rem;
+  }
+
+  .carousel-image {
+    max-height: 50vh;
+    padding-top: 6rem;
+  }
+
+  .side-image {
+    max-height: 45vh;
+  }
+
+  .left-img, .right-img {
+    width: 8vw;
+    padding-top: 6rem;
+  }
+
+  .left-arrow {
+    left: calc(50% - 30vw);
+  }
+  
+  .right-arrow {
+    right: calc(50% - 30vw);
+  }
+  
+  .carousel-dots {
+    padding-top: 6rem;
+    padding-bottom: 0rem;
+  }
+  
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .carousel-description {
+    max-width: 80vw;
+  }
+  
+  .description-background {
+    max-width: 60vw;
+    min-height: 30vh;
+  }
+  
+  .description-text {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    top: 40%;
+    max-width: 50vw;
+  }
+
+  .description-title {
+    font-size: 1.8rem;
+    font-weight: var(--fw-bold);
+    top: 20%;
+  }
+}
+
+/* Large device styles */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .carousel {
+    padding-top: 0rem;
+    padding-bottom: 5rem;
+  }
+
+  .carousel-title-img {
+    width: 45vw;
+  }
+  
+  .carousel-images {
+    height: 45vw;
+    padding-top: 0;
+  }
+
+  .carousel-image {
+    max-height: 60vh;
+    padding-top: 8rem;
+  }
+
+  .side-image {
+    max-height: 50vh;
+  }
+
+  .left-img, .right-img {
+    width: 5vw;
+    padding-top: 8rem;
+  }
+
+  .left-arrow {
+    left: calc(50% - 35vw);
+  }
+  
+  .right-arrow {
+    right: calc(50% - 35vw);
+  }
+  
+  .carousel-dots {
+    padding-top: 6rem;
+    padding-bottom: 0rem;
+  }
+  
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .carousel-description {
+    max-width: 80vw;
+  }
+  
+  .description-background {
+    max-width: 55vw;
+    min-height: 40vh;
+  }
+  
+  .description-text {
+    padding-top: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    top: 40%;
+    max-width: 45vw;
+  }
+
+  .description-title {
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    top: 20%;
+  }
+}
   
   
   
