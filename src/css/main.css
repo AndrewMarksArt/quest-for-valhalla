@@ -107,6 +107,7 @@ body, html {
     font-weight: var(--fw-light);
     font-family: var(--ff-primary);
     color: var(--clr-text-body);
+    z-index: 2;
 }
 
 .bottom-container {
